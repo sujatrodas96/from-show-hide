@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Show Hide</title>
+</head>
+
+<body>
+    <center>
+        <form name="frm">
+            <input type="text" name="s1" id="nme" placeholder="Name"><br><br>
+            <span id="s1" style="display: none;">
+             <input type="text" name="" id="eml" placeholder="Email-ID"><br><br>
+                </span>
+            <span id="s2" style="display: none;">
+             <input type="text" name="" id="phn" placeholder="Phone-no"><br><br>
+                </span>
+            <span id="s3" style="display: none;">
+             <input type="text" name="" id="address" placeholder="Address"><br><br>
+                </span>
+            <input type="button" name="" value="submit" id="f1" onclick="fun();">
+        </form><br>
+        <table cellpadding="10" cellspacing="1" border="1">
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE-NO</th>
+                <th>ADDRESS</th>
+            </tr>
+            <tr>
+                <td id="p1"></td>
+                <td id="p2"></td>
+                <td id="p3"></td>
+                <td id="p4"></td>
+            </tr>
+        </table><br>
+        <br>
+        <p id="p5"></p>
+    </center>
+
+    <script type="text/javascript">
+        function fun() {
+            var name = document.getElementById('nme').value;
+            if (name == "") {
+                alert('please Enter Your Name');
+            } else {
+                document.getElementById('p1').innerHTML = name;
+                document.getElementById('s1').style.display = 'block';
+                 var email = document.getElementById('eml').value;
+            if (email == "") {
+                alert('please Enter Your Email Id');
+            } else {
+                document.getElementById('p2').innerHTML = email;
+                document.getElementById('s2').style.display = 'block';
+                var phone = document.getElementById('phn').value;
+            if (phone == "") {
+                alert('please Enter Your Phone No');
+            } else {
+                document.getElementById('p3').innerHTML = phone;
+                document.getElementById('s3').style.display = 'block';
+                 var address = document.getElementById('address').value;
+            if (address == "") {
+                alert('please Enter Your Address');
+            } else {
+                document.getElementById('p4').innerHTML = address;
+                document.getElementById('p5').innerHTML = "Thank You For Giving Us Your Feedback";
+                document.getElementById('nme').value = '';
+                document.getElementById('eml').value = '';
+                document.getElementById('phn').value = '';
+                document.getElementById('address').value = '';
+                   }
+                 }
+               }
+             }
+        }
+    </script>
+</body>
+
+</html>
